@@ -2,10 +2,10 @@ class TicketsController < ApplicationController
 	before_action :set_project
 	before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
-	def new 
+	def new
 		@ticket = @project.tickets.build
 	end
-	
+
 	def create
 		@ticket = @project.tickets.build(ticket_params)
 		@ticket.author = current_user
@@ -17,9 +17,10 @@ class TicketsController < ApplicationController
 			flash.now[:alert] = "Ticket has not been created."
 			render "new"
 		end
-	end 
+	end
 
 	def show
+		authorize @ticket, :show?
 	end
 
 	def edit
@@ -34,11 +35,11 @@ class TicketsController < ApplicationController
 			render "edit"
 		end
 	end
-	
+
 	def destroy
 		@ticket.destroy
 		flash[:notice] = "Ticket has been deleted."
-		
+
 		redirect_to @project
 	end
 
