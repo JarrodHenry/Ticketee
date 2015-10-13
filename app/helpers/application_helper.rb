@@ -1,4 +1,13 @@
 module ApplicationHelper
+	def roles
+		{
+			'Manager' => 'manager',
+			'Editor' => 'editor',
+			'Viewer' => 'viewer'
+		}
+	end
+	
+
 	def title(*parts)
 		unless parts.empty?
 			content_for :title do

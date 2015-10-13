@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :roles
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -13,7 +14,7 @@ class User < ActiveRecord::Base
   def inactive_message
     archived_at.nil? ? super : :archived
   end
-  
+
 
 
 
@@ -23,6 +24,9 @@ class User < ActiveRecord::Base
 
   def archive
     self.update(archived_at: Time.now)
+  end
+  def role_on(project)
+    roles.find_by(project_id: project).try(:name)
   end
 
 end

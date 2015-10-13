@@ -4,6 +4,7 @@
 @import "projects";
 @import "tickets";
 @import "admin/application";
+@import "admin/users";
 @import "responsive";
 
 body {
@@ -18,7 +19,7 @@ header {
 		margin-top: 20px;
 	}
 }
-	
+
 
 ul.actions {
 	@extend .list-unstyled;
@@ -65,4 +66,3 @@ a.delete {
 form {
 	max-width: 500px;
 }
-
