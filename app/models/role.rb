@@ -6,8 +6,5 @@ class Role < ActiveRecord::Base
     %w(manager editor viewer)
   end
 
-  def role_on(project)
-    roles.find_by(project_id: project).try(:name)
-  end
-
+  
 end

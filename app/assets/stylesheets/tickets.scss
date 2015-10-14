@@ -9,7 +9,7 @@
 	th {
 		width: 35%;
 	}
-	
+
 	tr:first-child {
 		td,th {
 		border-top: 0px;
@@ -18,4 +18,8 @@
 	td, th {
 	line-height: 24px !important;
 	}
+}
+
+blockquote.comment p {
+	font-size: 14px;
 }
