@@ -50,4 +50,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.include Warden::Test::Helpers, type: :feature
  config.after(type: :feature) { Warden.test_reset! }
+
+ config.include Devise::TestHelpers, type: :controller
 end
