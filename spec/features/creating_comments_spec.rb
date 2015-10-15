@@ -47,4 +47,11 @@ RSpec.feature "Users can comment on tickets" do
       end
     end
 
+    scenario "but cannot change the state without permission" do
+      assign_role!(user, :editor, project)
+      visit project_ticket_path(project, ticket)
+
+      expect(page).not_to have_select "State"
+    end
+
 end
