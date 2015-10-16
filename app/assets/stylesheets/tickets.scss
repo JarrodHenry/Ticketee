@@ -29,3 +29,20 @@ blockquote.comment p {
 	font-size: 12px;
 	padding: 0.3em 0.6em;
 }
+
+.tag {
+	@extend .state;
+	@extend .label-info;
+	margin-right: 10px;
+
+	a {
+		color: white;
+		&.remove {
+			font-family: "FontAwesome";
+			@extend .fa-close;
+			margin-right: 0.5em;
+			text-decoration: none;
+
+		}
+	}
+}
