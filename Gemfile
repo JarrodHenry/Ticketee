@@ -38,6 +38,7 @@ gem "simple_form", "~> 3.1.0"
 gem "devise", "~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 gem "carrierwave", "~> 0.10.0"
+gem "searcher", github: "radar/searcher"
 
 group :test do
    gem "capybara", "~> 2.4"

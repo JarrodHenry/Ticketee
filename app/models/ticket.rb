@@ -10,6 +10,10 @@ class Ticket < ActiveRecord::Base
   validates :description, presence: true, length: {minimum: 10 }
   before_create :assign_default_state
   attr_accessor :tag_names
+  searcher do
+    label :tag, from: :tags, field: "name"
+  end
+
   def attachment_changed?
 	end
 
