@@ -26,5 +26,10 @@ class TicketPolicy < ApplicationPolicy
   def change_state?
     destroy?
   end
+
+  def tag?
+    destroy?
+  end
   
+
 end

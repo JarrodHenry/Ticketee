@@ -24,10 +24,10 @@
 				<% if @ticket.tags.any? %>
 					<tr id="tags">
 						<th>Tags:</th>
-						<td<%= render @ticket.tags %></td>
+						<td><%= render @ticket.tags %></td>
 					</tr>
 					<% end %>
-					
+
 		</table>
 		<ul class="actions">
 			<% if policy(@ticket).update? %>
