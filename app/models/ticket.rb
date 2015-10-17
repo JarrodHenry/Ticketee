@@ -12,6 +12,7 @@ class Ticket < ActiveRecord::Base
   attr_accessor :tag_names
   searcher do
     label :tag, from: :tags, field: "name"
+    label :state, from: :state, field: "name"
   end
 
   def attachment_changed?
