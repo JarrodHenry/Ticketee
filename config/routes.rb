@@ -1,5 +1,9 @@
+require "heartbeat/application"
 Rails.application.routes.draw do
 
+  mount Heartbeat::Application, at: "/heartbeat"
+
+  
   namespace :admin do
     root 'application#index'
     resources :projects, only: [:new, :create, :destroy]
