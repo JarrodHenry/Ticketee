@@ -39,7 +39,7 @@ gem "devise", "~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 gem "carrierwave", "~> 0.10.0"
 gem "searcher", github: "radar/searcher"
-
+gem "fog", "~> 1.29.0"
 group :test do
    gem "capybara", "~> 2.4"
    gem "factory_girl_rails", "~> 4.5"
