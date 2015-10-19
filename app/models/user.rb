@@ -15,7 +15,10 @@ class User < ActiveRecord::Base
     archived_at.nil? ? super : :archived
   end
 
-
+  def generate_api_key
+    self.update_column(:api_key, SecureRandom.hex(16))
+  end
+  
 
 
   def to_s
