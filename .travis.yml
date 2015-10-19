@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.2.3
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: gLI7i6LpmmXSgnS/MHn+Rv2brxHKkFKRH/eMMNsCucC9QRA/tauilvtW3/PiJIvDaC/8qChJmD8RXQQGeKAv6rU909cSBRpOSMehCjN8bz+TJsPcMcJcyJu7HoGg3oNOrdqzU4UhY0irPHQNtrEUd0X3+N2dBeNdvZ7jP87ZGhBp2Ez77FNbWJ1Pe78pNn4A3J+/gU4maua/ykIHSVKz4uxEKn6R/tA243fUpV4sA6d5IBfD6yFM+Vxsv2mO4wak77v/TPGfQzUDKGBeaUxs7Q//t93fE7yyBEXxZIfK/usg1ntEyOel2hVAsrpvUMaI3iHpuhCq0cisa2FzlqNu7eSTMj6PR4caqMSrX7l9LxtoU6M9QOGYWXwxBC2S/+XoNQ0vBIW/gx9hFt/5H5ulnBPOouqhY0FKzJkuFpzV0WIvVYAej1bE/kZRUJBlYPIET+/5X3uTZ3rUQjbfkcksTSNzzLdtupF9MUG1eOnLGIR4+RPeHxIRkN8IwjuFpmrZXSKKCnPv14Ggbjg10NvLWkGW11tbo2gGqaLDqFbqO6MmTcLJHcXe3ZcNHqRX4yxvVGi3L7NgjPjfH9cdI0KcOR7mrYlvluyImFFrIHBimO8i+XTOdv91UP0KAVo990IIg2Oz7G/0ldRRMyW4QOka1DldJ8D1aIn0uNIGAWeHol8=
+  app: obscure-badlands-8568
+  on:
+    repo: JarrodHenry/Ticketee
