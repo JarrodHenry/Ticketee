@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JarrodHenry/Ticketee.svg?branch=master)](https://travis-ci.org/JarrodHenry/Ticketee)
+{<img src="https://travis-ci.org/JarrodHenry/Ticketee.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/JarrodHenry/Ticketee]
 == README
 
 This is the Ticketee app from Rails in Action 4 by Manning Press.
