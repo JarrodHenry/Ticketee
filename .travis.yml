@@ -4,6 +4,7 @@ script: bundle exec rspec
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
+- bundle exec rake db:migrate
 deploy:
   provider: heroku
   api_key:
